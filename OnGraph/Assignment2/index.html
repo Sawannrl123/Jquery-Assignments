@@ -7,18 +7,31 @@
 		<script type="text/javascript" src="../js/custom1.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<header id="header">Header</header>
-			<div class="chat-container">
-				<div class="chat">
-					<ul>
-					</ul>
-					<span id="scroll_id"></span>
-				</div>
-				<div class="type-chat">
-					<form id="chat_form">
-						<textarea class="messageTextarea" placeholder="Write your comment here..."></textarea>
-					</form>
+		<div id="code1">
+			<div class="container">
+				<header id="header">Header</header>
+				<button type="button" class="open-chat-window">Open Chat Window</button>
+			</div>
+			<div class="overlay hidden"></div>
+		</div>
+		<div>
+			<div class="chat-container hidden" id="dragable" ondragstart="dragStart(event)" ondrag="dragging(event)" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true">
+				<div class="chat-wrapper">
+					<div class="top-bar">
+						<span id="minimize"><img src="../images/minus.svg" width="20px" height="20px"></span>
+						<span id="maximize"><img src="../images/expand.svg" width="20px" height="20px"></span>
+						<span id="close"><img src="../images/error.svg" width="20px" height="20px"></span>
+					</div>
+					<div class="chat">
+						<ul>
+						</ul>
+						<span id="scroll_id"></span>
+					</div>
+					<div class="type-chat">
+						<form id="chat_form">
+							<textarea class="messageTextarea" placeholder="Write your comment here..."></textarea>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
